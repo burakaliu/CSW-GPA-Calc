@@ -1,22 +1,52 @@
 import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { Courseform } from './components/Courseform.js';
+
+export function Header() {
+  return(
+    <header>
+      <h1>CSW GPA Calculator</h1>
+    </header>
+  )
+}
+
+
+function AddCourseForm({forms, setForms}) {
+
+  const handleAddition = () => {
+    // Add a new form to the list of forms
+    setForms([...forms, <Courseform key={forms.length} />]);
+  };
+  return(
+    <div>
+      <button type="submit" onClick={handleAddition}>
+        Add Course
+      </button>
+    </div>
+  )
+}
+
+
+function CourseList({forms}){
+  return (
+    <div className='course-list'>
+      {forms.map((form, index) => (
+        <div key={index}>{form}</div>
+      ))}
+    </div>
+  )
+}
 
 function App() {
+  const [forms, setForms] = useState([]);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Header />
+        <Courseform />
+        <CourseList forms={forms} />
+        <AddCourseForm forms={forms} setForms={setForms} />
       </header>
     </div>
   );

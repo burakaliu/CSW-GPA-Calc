@@ -1,0 +1,28 @@
+.course-form{
+    display: flex;
+    flex-direction: row;
+    color: black;
+}
+
+.options-bar {
+    display: flex;
+    flex-direction: row;
+}
+
+.option {
+    width: 30px; /* Equal width for all options */
+    height: 30px; /* Set your desired height */
+    background-color: #ccc; /* Default background color */
+    margin: 5px; /* Space between options */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-family: Arial, sans-serif; /* Set font family */
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option.selected {
+    background-color: #ffcc00; /* Highlight color for selected option */
+}
+  
