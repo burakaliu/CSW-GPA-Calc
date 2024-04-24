@@ -2,7 +2,7 @@
 
 Designed specifically for the Charter School of Wilmington's phasing system, this app takes in your classes and grades and spits out your GPA!
 
- :tw-1f4cc:   **Access It Here: https://csw-gpa-calculator.web.app/**
+📌   **Access It Here: https://csw-gpa-calculator.web.app/**
 
 ## Phasing
 If you aren't sure about what phases your classes are, you're dumb. Go to Schoology and see what number is before your class name. Ex. "6-AP CALCULUS AB: Section 4-D" would be phase 6, which means its an AP class. If you still don't know what phase your class is, use this general guideline:
