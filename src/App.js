@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Courseform } from './components/Courseform.js';
+import { CourseList, AddCourseForm } from './components/CourseList.js';
 
 export function Header() {
   return(
@@ -10,32 +10,64 @@ export function Header() {
   )
 }
 
+function GPACalculator() {
+  const [gpa, setGPA] = useState(Math.round((Math.random() * 4 + 1) * 10) / 10);
 
-function AddCourseForm({forms, setForms}) {
+  const calculateGPA = () => {
+    let total = 0;
+    let count = 0;
+    let gpa = 0;
+    for (let i = 0; i < document.getElementsByClassName("course-form").length; i++) {
+      let grade = document.getElementsByClassName("course-form")[i].getElementsByClassName("grade")[0].innerText;
+      console.log(grade);
+      let phase = document.getElementsByClassName("course-form")[i].getElementsByClassName("selected")[0].innerText;
 
-  const handleAddition = () => {
-    // Add a new form to the list of forms
-    setForms([...forms, <Courseform key={forms.length} />]);
+      let phaseBoost = 0;
+      if (!isNaN(phaseBoost)) {
+        if (phase === "4"){
+          phaseBoost = 0.25;
+        } else if (phase === "5"){
+          phaseBoost = 0.5;
+        }else if (phase === "AP"){
+          phaseBoost = 1;
+        }
+      }
+
+      console.log(phase);
+
+      if (grade === "A") {
+        total += (4.0 + phaseBoost);
+      } else if (grade === "A-") {
+        total += (3.7 + phaseBoost);
+      } else if (grade === "B+") {
+        total += (3.3 + phaseBoost);
+      } else if (grade === "B") {
+        total += (3.0 + phaseBoost);
+      } else if (grade === "B-") {
+        total += (2.7 + phaseBoost);
+      } else if (grade === "C+") {
+        total += (2.3 + phaseBoost);
+      } else if (grade === "C") {
+        total += (2.0 + phaseBoost);
+      } else if (grade === "C-") {
+        total += (1.7 + phaseBoost);
+      } else if (grade === "D") {
+        total += (1.0 + phaseBoost);
+      } else {
+        total += (0.0 + phaseBoost);
+      }
+      count++;
+    }
+    gpa = total / count;
+    setGPA((Math.round(gpa * 10) / 10).toFixed(1));
   };
-  return(
-    <div>
-      <button type="submit" onClick={handleAddition}>
-        Add Course
-      </button>
-    </div>
-  )
-}
-
-
-function CourseList({forms}){
   return (
-    <div className='course-list'>
-      {forms.map((form, index) => (
-        <div key={index}>{form}</div>
-      ))}
+    <div>
+      <button onClick={calculateGPA}>Calculate GPA</button>
+      <h2>{gpa}</h2>
     </div>
-  )
-}
+  );
+};
 
 function App() {
   const [forms, setForms] = useState([]);
@@ -43,9 +75,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header />
-        <Courseform />
         <CourseList forms={forms} />
         <AddCourseForm forms={forms} setForms={setForms} />
+        <GPACalculator />
       </header>
     </div>
   );

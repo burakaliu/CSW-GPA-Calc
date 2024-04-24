@@ -55,7 +55,7 @@ export function Courseform() {
         />
       </label>
       <label>
-        <p>{grade}</p>
+        <p className="grade">{grade}</p>
       </label>
     </form>
   );
