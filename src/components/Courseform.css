@@ -1,12 +1,19 @@
 .course-form{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     color: black;
+    margin: 10px;
+    background-color: antiquewhite;
+    border-radius: 10px;
 }
 
 .options-bar {
     display: flex;
     flex-direction: row;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .option {
@@ -20,9 +27,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
 }
 
 .option.selected {
     background-color: #ffcc00; /* Highlight color for selected option */
+}
+
+.grade-input {
+    width: 50px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
 }
   

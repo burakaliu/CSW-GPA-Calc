@@ -39,17 +39,17 @@ export function Courseform() {
   return (
     <form className="course-form">
       <label>
-        <input type="text" name="name" placeholder="Course Name" />
+        <input type="text" name="name" placeholder="Course name" />
       </label>
       <label>
         Phase:
         <CoursePhasing />
       </label>
       <label>
-        %:
         <input
           type="text"
           name="grade"
+          className="grade-input"
           placeholder={Math.round(Math.random() * 20 + 80)}
           onChange={handleGradeChange}
         />

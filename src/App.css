@@ -10,14 +10,14 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #F8F9FA;
 }
 
 
 .course-list{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 60%;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 5px;
