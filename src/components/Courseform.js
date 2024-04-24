@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Courseform.css";
 
-export function Courseform() {
+export function Courseform({ forms, setForms }) {
   const [grade, setGrade] = useState("A");
 
   const handleGradeChange = (e) => {
@@ -10,6 +10,15 @@ export function Courseform() {
       const letterGrade = calculateLetterGrade(newValue);
       setGrade(letterGrade);
     }
+  };
+
+  const handleFormRemove = () => {
+    // Create a copy of the forms array
+    const updatedForms = [...forms];
+    // Remove the last form
+    updatedForms.pop();
+    // Update the state with the modified forms array
+    setForms(updatedForms);
   };
 
   function calculateLetterGrade(grade) {
@@ -37,9 +46,18 @@ export function Courseform() {
   }
 
   return (
-    <form className="course-form">
+    <form
+      className="course-form"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <label>
-        <input className="course-name" type="text" name="name" placeholder="Course name" />
+        <input
+          className="course-name"
+          type="text"
+          name="name"
+          placeholder="Course name"
+        />
       </label>
       <label>
         <CoursePhasing />
@@ -54,6 +72,9 @@ export function Courseform() {
         />
       </label>
       <label>
+        <button className="delete-button" onClick={handleFormRemove}>
+          Remove
+        </button>
         <p className="grade">{grade}</p>
       </label>
     </form>

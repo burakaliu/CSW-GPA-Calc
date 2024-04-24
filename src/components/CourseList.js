@@ -1,6 +1,10 @@
 import { Courseform } from "./Courseform";
 import './CourseList.css';
 
+export function CourseAddButton(){
+
+}
+
 export function CourseList({ forms }) {
   return (
     <div className="course-list">
@@ -20,11 +24,11 @@ export function CourseList({ forms }) {
 export function AddCourseForm({ forms, setForms }) {
   const handleAddition = () => {
     // Add a new form to the list of forms
-    setForms([...forms, <Courseform key={forms.length} />]);
+    setForms([...forms, <Courseform key={forms.length} forms={forms} setForms={setForms}/>]);
   };
   return (
     <div>
-      <button type="submit" onClick={handleAddition}>
+      <button className="add-button" type="submit" onClick={handleAddition}>
         Add Course
       </button>
     </div>

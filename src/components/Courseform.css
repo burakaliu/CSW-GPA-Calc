@@ -1,59 +1,93 @@
-.course-form{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: black;
-    background-color: #F8F9FA;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 10px;
+.course-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: black;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
 }
 
 .options-bar {
-    display: flex;
-    flex-direction: row;
-    margin-left: 20px;
-    margin-right: calc(-5px + 10vmin);
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-right: calc(-5px + 10vmin);
 }
 
 .option {
-    width: 30px; /* Equal width for all options */
-    height: 30px; /* Set your desired height */
-    background-color: #ccc; /* Default background color */
-    margin: 5px; /* Space between options */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    font-family: Arial, sans-serif; /* Set font family */
-    font-size: small;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+  width: 30px; /* Equal width for all options */
+  height: 30px; /* Set your desired height */
+  background-color: #ccc; /* Default background color */
+  margin: 5px; /* Space between options */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-family: Arial, sans-serif; /* Set font family */
+  font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .option.selected {
-    background-color: #ffcc00; /* Highlight color for selected option */
+  background-color: #ffcc00; /* Highlight color for selected option */
 }
 
 .grade {
-    width: auto;
-    height: auto;
-    margin: 10px;
-    margin-right: calc(-10px + 10vmin);
+  width: auto;
+  height: auto;
+  margin: 10px;
+  margin-right: calc(-10px + 10vmin);
 }
 
 .grade-input {
-    width: 50px;
-    height: 30px;
-    margin: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding: 5px;
-    margin-right: calc(20vmin + 5px);
+  width: 50px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-right: calc(20vmin + 5px);
 }
 
 .course-name {
-    width: 20vmin;
-    margin-right: calc(10vmin - 5px);
-    margin-left: calc(10px + 5vmin);
+  width: 20vmin;
+  margin-right: calc(10vmin - 5px);
+  margin-left: calc(10px + 5vmin);
 }
-  
+
+.delete-button {
+  display: none; /* Initially hide the delete button */
+  appearance: none;
+  background-color: #f54040;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-left: -30px;
+}
+
+.course-form:hover .delete-button {
+  display: inline-block; /* Show the delete button when course-form is hovered over */
+}
+
+.course-form:hover .grade{
+    display: none; /* Hide the grade */
+}
+
