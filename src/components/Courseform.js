@@ -48,8 +48,6 @@ export function Courseform({ forms, setForms }) {
   return (
     <form
       className="course-form"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
     >
       <label>
         <input
