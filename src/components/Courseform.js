@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Courseform.css";
 
 export function Courseform() {
-  const [grade, setGrade] = useState(Math.round(Math.random() * 20 + 80));
+  const [grade, setGrade] = useState("A");
 
   const handleGradeChange = (e) => {
     const newValue = parseInt(e.target.value);
@@ -39,10 +39,9 @@ export function Courseform() {
   return (
     <form className="course-form">
       <label>
-        <input type="text" name="name" placeholder="Course name" />
+        <input className="course-name" type="text" name="name" placeholder="Course name" />
       </label>
       <label>
-        Phase:
         <CoursePhasing />
       </label>
       <label>

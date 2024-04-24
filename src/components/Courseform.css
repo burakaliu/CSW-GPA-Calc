@@ -1,19 +1,19 @@
 .course-form{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     color: black;
-    margin: 10px;
-    background-color: antiquewhite;
+    background-color: #F8F9FA;
     border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 .options-bar {
     display: flex;
     flex-direction: row;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: calc(-5px + 10vmin);
 }
 
 .option {
@@ -34,6 +34,13 @@
     background-color: #ffcc00; /* Highlight color for selected option */
 }
 
+.grade {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    margin-right: calc(-10px + 10vmin);
+}
+
 .grade-input {
     width: 50px;
     height: 30px;
@@ -41,5 +48,12 @@
     border-radius: 5px;
     border: 1px solid #ccc;
     padding: 5px;
+    margin-right: calc(20vmin + 5px);
+}
+
+.course-name {
+    width: 20vmin;
+    margin-right: calc(10vmin - 5px);
+    margin-left: calc(10px + 5vmin);
 }
   

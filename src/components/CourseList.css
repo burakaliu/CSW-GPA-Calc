@@ -1,0 +1,13 @@
+.label-container {
+    display: flex;
+    flex-direction: row;
+    color: black;
+}
+
+h3 {
+    padding-right: calc(10px + 20vmin);
+}
+
+.classColLabel {
+    padding-left: calc(10vmin);
+}
