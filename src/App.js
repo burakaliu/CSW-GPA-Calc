@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { CourseList, AddCourseForm } from './components/CourseList.js';
+import { CourseList } from './components/CourseList.js';
 import { GPACalculator } from './components/GPACalculator.js';
 
 export function Header() {
