@@ -5,11 +5,12 @@
 }
 
 h3 {
-    padding-right: calc(10px + 20vmin);
+    padding-right: calc(10vmin);
+    font-size: calc(5vmin);
 }
 
 .classColLabel {
-    padding-left: calc(10vmin);
+    padding-left: calc(5vmin);
 }
 
 .add-button {

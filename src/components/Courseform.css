@@ -7,13 +7,12 @@
   border-radius: 10px;
   margin-bottom: 20px;
   padding: 10px;
-  transform: scale(1vh);
 }
 
 .options-bar {
   display: flex;
   flex-direction: row;
-  margin-left: 20px;
+  margin-left: calc(5vmin);
   margin-right: calc(-5px + 10vmin);
 }
 
@@ -21,7 +20,7 @@
   width: 30px; /* Equal width for all options */
   height: 30px; /* Set your desired height */
   background-color: #ccc; /* Default background color */
-  margin: 5px; /* Space between options */
+  margin: calc(0.5vmin); /* Space between options */
   cursor: pointer; /* Change cursor to pointer on hover */
   font-family: Arial, sans-serif; /* Set font family */
   font-size: small;
@@ -38,14 +37,14 @@
 .grade {
   width: auto;
   height: auto;
-  margin: 10px;
+  margin: calc(2vmin);
   margin-right: calc(-10px + 10vmin);
 }
 
 .grade-input {
   width: 50px;
   height: 30px;
-  margin: 5px;
+  margin: calc(1vmin);
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 5px;
