@@ -1,16 +1,21 @@
 .label-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     color: black;
 }
 
 h3 {
-    padding-right: calc(10vmin);
+    
     font-size: calc(5vmin);
 }
 
 .classColLabel {
     padding-left: calc(5vmin);
+}
+
+.gradeColLabel{
+  padding-right: calc(6vmin);
 }
 
 .add-button {

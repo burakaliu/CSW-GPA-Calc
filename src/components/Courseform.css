@@ -1,6 +1,7 @@
 .course-form {
   display: flex;
   flex-direction: row;
+  justify-content: first baseline;
   align-items: center;
   color: black;
   background-color: #f8f9fa;
@@ -9,16 +10,22 @@
   padding: 10px;
 }
 
+.course-form label {
+  flex-grow: 1;
+  align-items: left;
+  justify-content: left;
+}
+
 .options-bar {
   display: flex;
   flex-direction: row;
-  margin-left: calc(5vmin);
-  margin-right: calc(-5px + 10vmin);
+  align-items: center;
+  justify-content: center;
 }
 
 .option {
-  width: 30px; /* Equal width for all options */
-  height: 30px; /* Set your desired height */
+  width: calc(6vmin); /* Equal width for all options */
+  height: calc(6vmin); /* Set your desired height */
   background-color: #ccc; /* Default background color */
   margin: calc(0.5vmin); /* Space between options */
   cursor: pointer; /* Change cursor to pointer on hover */
@@ -35,26 +42,20 @@
 }
 
 .grade {
-  width: auto;
-  height: auto;
-  margin: calc(2vmin);
-  margin-right: calc(-10px + 10vmin);
+  margin: calc(1vmin);
 }
 
 .grade-input {
-  width: 50px;
-  height: 30px;
+  width: calc(6vmin);
+  height: calc(5vmin);
   margin: calc(1vmin);
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 5px;
-  margin-right: calc(20vmin + 5px);
 }
 
 .course-name {
   width: 20vmin;
-  margin-right: calc(10vmin - 5px);
-  margin-left: calc(10px + 5vmin);
 }
 
 .delete-button {
